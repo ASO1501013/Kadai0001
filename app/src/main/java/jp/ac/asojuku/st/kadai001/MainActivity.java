@@ -1,13 +1,12 @@
 package jp.ac.asojuku.st.kadai001;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
     implements View.OnClickListener, View.OnLongClickListener {
@@ -45,7 +44,7 @@ public class MainActivity extends AppCompatActivity
         // ラジオボタンのキャプション（説明文）を取得
         String strCaption = (String) checkedRgBtn.getText();
         // 正解用Keywordを取得
-        String usersOption = (String) getResources().getString(R.string.usersOption);
+        String usersOption = getResources().getString(R.string.usersOption);
         // 選ばれたラジオボタンのキャプションを正解として次の画面へのインテントに含める
         intent.putExtra(usersOption, strCaption);
 
